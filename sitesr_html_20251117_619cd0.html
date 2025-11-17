@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SR Solucion - Especialistas em Informática e Eletrônica - Praia, Cabo Verde</title>
+    <meta name="description" content="SR Solucion - Especialistas em Informática e Eletrônica em Praia, Cabo Verde. Reparação de telemóveis, computadores, venda de acessórios. Contactos: 954 02 08 e 926 6746">
+    <meta name="keywords" content="informática praia, eletrônica cabo verde, reparação telemóveis, computadores praia, srsolucion, loja tecnologia praia">
+    <meta name="author" content="SR Solucion">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--accent);
+            margin-left: 5px;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 2.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .cover-container {
+            position: relative;
+            margin-top: 80px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .cover-photo {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .cover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cover-edit {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cover-edit:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        .profile-section {
+            background: white;
+            margin: -100px auto 0;
+            position: relative;
+            z-index: 100;
+            border-radius: 20px;
+            padding: 120px 2rem 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 1200px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .avatar-edit {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: var(--accent);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .avatar-edit:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info p {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border: 2px solid var(--accent);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-success {
+            background: var(--success);
+            border-color: var(--success);
+        }
+
+        .btn-success:hover {
+            background: transparent;
+            color: var(--success);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            border-color: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background: transparent;
+            color: #25D366;
+        }
+
+        .admin-panel {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .admin-section {
+            margin-bottom: 2rem;
+        }
+
+        .admin-section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .content-section {
+            margin: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .products-grid,
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card,
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover,
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            height: 200px;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--secondary);
+            position: relative;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-content .price {
+            color: var(--accent);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .reviews-section {
+            background: var(--light);
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .review-stars {
+            color: var(--warning);
+            margin: 0.5rem 0;
+        }
+
+        .add-review {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+        }
+
+        .phone-numbers {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .phone-number {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.15);
+            padding: 15px 25px;
+            margin: 0 10px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .phone-number:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+
+        .messaging-apps {
+            margin-top: 1.5rem;
+        }
+
+        .location-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-stats {
+                justify-content: center;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .cover-container {
+                height: 300px;
+            }
+            .profile-section {
+                margin-top: -80px;
+                padding-top: 100px;
+            }
+            .phone-number {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    SR <span>SOLUCION</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#avaliacoes">Avaliações</a></li>
+                    <li><a href="#admin">Admin</a></li>
+                    <div class="user-menu">
+                        <div class="user-avatar" onclick="openModal('profileModal')">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cover-container">
+        <div class="cover-photo" id="coverPhoto">
+            <div class="cover-overlay">
+                <h1 style="color: white; font-size: 3rem; text-align: center;">SR Solucion</h1>
+            </div>
+            <div class="cover-edit" onclick="openModal('coverModal')">
+                <i class="fas fa-camera"></i> Alterar Capa
+            </div>
+        </div>
+    </div>
+
+    <section class="profile-section">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <i class="fas fa-laptop-code"></i>
+                <div class="avatar-edit" onclick="openModal('avatarModal')">
+                    <i class="fas fa-camera"></i>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h1>SR Solucion</h1>
+                <p>Especialistas em Informática e Eletrônica - Praia, Cabo Verde</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label">Avaliação</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Clientes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">89</div>
+                        <div class="stat-label">Projetos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
+            <div style="text-align: center; padding: 1rem; background: var(--light); border-radius: 10px;">
+                <i class="fas fa-phone" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                <div style="font-weight: bold;">954 02 08</div>
+                <small style="color: var(--text-light);">WhatsApp/Viber</small>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: var(--light); border-radius: 10px;">
+                <i class="fas fa-phone" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                <div style="font-weight: bold;">926 6746</div>
+                <small style="color: var(--text-light);">WhatsApp/Viber</small>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: var(--light); border-radius: 10px;">
+                <i class="fas fa-envelope" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                <div style="font-weight: bold;">infosrsolucion@gmail.com</div>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: var(--light); border-radius: 10px;">
+                <i class="fas fa-map-marker-alt" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                <div style="font-weight: bold;">Rua Farmácia 2000</div>
+                <small style="color: var(--text-light);">Espaço Txadinha Online</small>
+            </div>
+        </div>
+
+        <div class="admin-panel" id="admin">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">Painel de Administração</h2>
+            
+            <div class="admin-section">
+                <h3>📁 Gestão de Conteúdo</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <button class="btn" onclick="openModal('addProductModal')">
+                        <i class="fas fa-plus"></i> Novo Produto
+                    </button>
+                    <button class="btn btn-outline" onclick="openModal('addServiceModal')">
+                        <i class="fas fa-plus"></i> Novo Serviço
+                    </button>
+                    <button class="btn btn-success" onclick="openModal('editProfileModal')">
+                        <i class="fas fa-edit"></i> Editar Perfil
+                    </button>
+                </div>
+            </div>
+
+            <div class="admin-section">
+                <h3>📊 Estatísticas Rápidas</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+                    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">12</div>
+                        <div style="color: var(--text-light);">Produtos Ativos</div>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">8</div>
+                        <div style="color: var(--text-light);">Serviços</div>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--secondary);">23</div>
+                        <div style="color: var(--text-light);">Avaliações</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="produtos">
+            <div class="section-title">
+                <h2>Nossos Produtos</h2>
+                <p>Equipamentos e acessórios de qualidade</p>
+            </div>
+            <div class="products-grid" id="productsContainer"></div>
+        </div>
+
+        <div class="content-section" id="servicos">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções profissionais para suas necessidades</p>
+            </div>
+            <div class="services-grid" id="servicesContainer"></div>
+        </div>
+
+        <div class="reviews-section" id="avaliacoes">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Avaliações dos Clientes</h2>
+                    <p>O que nossos clientes dizem sobre nossos serviços</p>
+                </div>
+                <div class="reviews-grid" id="reviewsContainer"></div>
+                
+                <div class="add-review">
+                    <h3 style="margin-bottom: 1rem;">Deixe sua Avaliação</h3>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label>Seu Nome:</label>
+                            <input type="text" id="reviewerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Avaliação (1-5 estrelas):</label>
+                            <select id="reviewRating" required>
+                                <option value="5">★★★★★ - Excelente</option>
+                                <option value="4">★★★★☆ - Muito Bom</option>
+                                <option value="3">★★★☆☆ - Bom</option>
+                                <option value="2">★★☆☆☆ - Regular</option>
+                                <option value="1">★☆☆☆☆ - Ruim</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Comentário:</label>
+                            <textarea id="reviewComment" required placeholder="Conte sua experiência..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">
+                            <i class="fas fa-paper-plane"></i> Enviar Avaliação
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SR SOLUCION</h4>
+                    <p>Sua solução completa em informática e eletrônica em Praia, Cabo Verde.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contactos</h4>
+                    <p>📞 954 02 08 (WhatsApp/Viber)</p>
+                    <p>📞 926 6746 (WhatsApp/Viber)</p>
+                    <p>📧 infosrsolucion@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Localização</h4>
+                    <p>📍 Rua Farmácia 2000</p>
+                    <p>Espaço Txadinha Online</p>
+                    <p>Praia, Cabo Verde</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SR Solucion - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="coverModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Alterar Foto de Capa</h3>
+                <button class="close-modal" onclick="closeModal('coverModal')">&times;</button>
+            </div>
+            <div class="form-group">
+                <label>URL da Nova Foto:</label>
+                <input type="url" id="newCoverUrl" placeholder="https://exemplo.com/foto.jpg">
+            </div>
+            <button class="btn" onclick="changeCover()">Alterar Capa</button>
+        </div>
+    </div>
+
+    <div id="avatarModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Alterar Foto de Perfil</h3>
+                <button class="close-modal" onclick="closeModal('avatarModal')">&times;</button>
+            </div>
+            <div class="form-group">
+                <label>URL da Nova Foto:</label>
+                <input type="url" id="newAvatarUrl" placeholder="https://exemplo.com/avatar.jpg">
+            </div>
+            <button class="btn" onclick="changeAvatar()">Alterar Avatar</button>
+        </div>
+    </div>
+
+    <div id="addProductModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Adicionar Novo Produto</h3>
+                <button class="close-modal" onclick="closeModal('addProductModal')">&times;</button>
+            </div>
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label>Nome do Produto:</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="form-group">
+                    <label>Preço (CVE):</label>
+                    <input type="number" id="productPrice" required>
+                </div>
+                <div class="form-group">
+                    <label>Descrição:</label>
+                    <textarea id="productDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>URL da Imagem:</label>
+                    <input type="url" id="productImage" placeholder="https://exemplo.com/produto.jpg">
+                </div>
+                <button type="submit" class="btn">Adicionar Produto</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="addServiceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Adicionar Novo Serviço</h3>
+                <button class="close-modal" onclick="closeModal('addServiceModal')">&times;</button>
+            </div>
+            <form id="addServiceForm">
+                <div class="form-group">
+                    <label>Nome do Serviço:</label>
+                    <input type="text" id="serviceName" required>
+                </div>
+                <div class="form-group">
+                    <label>Descrição:</label>
+                    <textarea id="serviceDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Preço (opcional):</label>
+                    <input type="text" id="servicePrice" placeholder="A partir de 2.000 CVE">
+                </div>
+                <div class="form-group">
+                    <label>URL da Imagem:</label>
+                    <input type="url" id="serviceImage" placeholder="https://exemplo.com/servico.jpg">
+                </div>
+                <button type="submit" class="btn">Adicionar Serviço</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let products = [
+            {
+                id: 1,
+                name: "Laptop HP EliteBook",
+                price: "45.000 CVE",
+                description: "Intel i5, 8GB RAM, 256GB SSD, Ecrã 14\"",
+                image: "💻"
+            },
+            {
+                id: 2,
+                name: "Samsung Galaxy A54",
+                price: "32.000 CVE",
+                description: "128GB, 6GB RAM, Câmara 50MP, 5G",
+                image: "📱"
+            },
+            {
+                id: 3,
+                name: "Headphones Wireless",
+                price: "8.500 CVE",
+                description: "Bluetooth, Noise Cancelling, Bateria 30h",
+                image: "🎧"
+            }
+        ];
+
+        let services = [
+            {
+                id: 1,
+                name: "Manutenção de Computadores",
+                description: "Reparação, formatação e upgrades de PCs e laptops",
+                price: "A partir de 2.000 CVE",
+                image: "🛠️"
+            },
+            {
+                id: 2,
+                name: "Reparo de Telemóveis",
+                description: "Substituição de ecrãs, baterias e componentes",
+                price: "Orçamento Grátis",
+                image: "📱"
+            },
+            {
+                id: 3,
+                name: "Instalação de Software",
+                description: "Sistemas operacionais, antivírus e aplicações",
+                price: "1.500 CVE",
+                image: "💾"
+            }
+        ];
+
+        let reviews = [
+            {
+                id: 1,
+                name: "Carlos Silva",
+                rating: 5,
+                comment: "Serviço excelente! Repararam meu laptop rapidamente.",
+                date: "2024-01-15"
+            },
+            {
+                id: 2,
+                name: "Maria Santos",
+                rating: 4,
+                comment: "Bom atendimento e preços justos. Recomendo!",
+                date: "2024-01-10"
+            },
+            {
+                id: 3,
+                name: "João Pereira",
+                rating: 5,
+                comment: "Comprei um telemóvel e o serviço foi impecável!",
+                date: "2024-01-08"
+            }
+        ];
+
+        function initializePage() {
+            renderProducts();
+            renderServices();
+            renderReviews();
+        }
+
+        function renderProducts() {
+            const container = document.getElementById('productsContainer');
+            container.innerHTML = products.map(product => `
+                <div class="product-card">
+                    <div class="card-image">
+                        ${product.image}
+                        <div class="card-badge">Novo</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>${product.name}</h3>
+                        <div class="price">${product.price}</div>
+                        <p>${product.description}</p>
+                        <button class="btn" style="margin-top: 1rem;" onclick="window.open('https://wa.me/2389540208?text=Olá! Gostaria de comprar: ${product.name}', '_blank')">
+                            <i class="fas fa-shopping-cart"></i> Comprar via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderServices() {
+            const container = document.getElementById('servicesContainer');
+            container.innerHTML = services.map(service => `
+                <div class="service-card">
+                    <div class="card-image">
+                        ${service.image}
+                    </div>
+                    <div class="card-content">
+                        <h3>${service.name}</h3>
+                        <div class="price">${service.price}</div>
+                        <p>${service.description}</p>
+                        <button class="btn btn-outline" style="margin-top: 1rem;" onclick="window.open('https://wa.me/2389540208?text=Olá! Gostaria de saber mais sobre: ${service.name}', '_blank')">
+                            <i class="fab fa-whatsapp"></i> Pedir Orçamento
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderReviews() {
+            const container = document.getElementById('reviewsContainer');
+            container.innerHTML = reviews.map(review => `
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            ${review.name.charAt(0)}
+                        </div>
+                        <div>
+                            <strong>${review.name}</strong>
+                            <div style="color: var(--text-light); font-size: 0.9rem;">${review.date}</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}
+                    </div>
+                    <p>${review.comment}</p>
+                </div>
+            `).join('');
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function changeCover() {
+            const url = document.getElementById('newCoverUrl').value;
+            if (url) {
+                document.getElementById('coverPhoto').style.backgroundImage = `url('${url}')`;
+                closeModal('coverModal');
+                document.getElementById('newCoverUrl').value = '';
+            }
+        }
+
+        function changeAvatar() {
+            const url = document.getElementById('newAvatarUrl').value;
+            if (url) {
+                const avatar = document.querySelector('.profile-avatar');
+                avatar.innerHTML = `
+                    <img src="${url}" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="avatar-edit" onclick="openModal('avatarModal')">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                `;
+                closeModal('avatarModal');
+                document.getElementById('newAvatarUrl').value = '';
+            }
+        }
+
+        document.getElementById('addProductForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const newProduct = {
+                id: products.length + 1,
+                name: document.getElementById('productName').value,
+                price: document.getElementById('productPrice').value + ' CVE',
+                description: document.getElementById('productDescription').value,
+                image: document.getElementById('productImage').value || '💻'
+            };
+            products.push(newProduct);
+            renderProducts();
+            closeModal('addProductModal');
+            this.reset();
+            alert('Produto adicionado com sucesso!');
+        });
+
+        document.getElementById('addServiceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const newService = {
+                id: services.length + 1,
+                name: document.getElementById('serviceName').value,
+                description: document.getElementById('serviceDescription').value,
+                price: document.getElementById('servicePrice').value || 'Sob Consulta',
+                image: document.getElementById('serviceImage').value || '🛠️'
+            };
+            services.push(newService);
+            renderServices();
+            closeModal('addServiceModal');
+            this.reset();
+            alert('Serviço adicionado com sucesso!');
+        });
+
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const newReview = {
+                id: reviews.length + 1,
+                name: document.getElementById('reviewerName').value,
+                rating: parseInt(document.getElementById('reviewRating').value),
+                comment: document.getElementById('reviewComment').value,
+                date: new Date().toISOString().split('T')[0]
+            };
+            reviews.push(newReview);
+            renderReviews();
+            this.reset();
+            alert('Obrigado pela sua avaliação!');
+        });
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>
